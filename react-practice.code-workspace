@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../react-practice.wiki"
+		}
+	],
+	"settings": {
+		"files.encoding": "utf8",
+		"workbench.iconTheme": "vscode-icons",
+		"workbench.colorTheme": "Monokai",
+		"files.eol": "\n",
+		"liveServer.settings.multiRootWorkspaceName": "react-practice",
+	}
+}
