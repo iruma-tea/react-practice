@@ -8,6 +8,16 @@ import reportWebVitals from './reportWebVitals';
 import AppClass from './AppClass';
 import './chap02/class.css';
 
+// ■ Chap03
+import MyHello from './chap03/MyHello';
+import EventBasic from './chap03/EventBasic';
+import StateBasic from './chap03/StateBasic';
+import books from './chap03/books';
+import ForList from './chap03/ForList';
+import ForNest from './chap03/Fornest';
+import ForFilter from './chap03/ForFilter';
+import ForSort from './chap03/ForSort';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
@@ -92,7 +102,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
   // <p className='hoge'>WINGSプロジェクト</p>
 // );
 
-const title = 'これからはじめるVue.js 3実践入門';
+// const title = 'これからはじめるVue.js 3実践入門';
+
 // root.render(
 //   <div className='main'>
 //     <p>「{title}」(SBクリエティブ刊)</p>
@@ -100,16 +111,44 @@ const title = 'これからはじめるVue.js 3実践入門';
 //     絶賛発売中！
 //   </div>
 // );
+// root.render(
+//   React.createElement('div', { className: 'main'}, 
+//     React.createElement('p', null, `「${title}」（SBクリエイティブ刊）`),
+//     React.createElement('img', {
+//       src: 'https://wings.msn.to/books/978-4-8156-1336-5/978-4-8156-1336-5.jpg',
+//       alt: title,
+//     }),
+//     '絶賛発売中！'
+//   )
+// );
+
+// root.render(
+//   <MyHello myName="鈴木" />
+// );
+
+// root.render(
+//   <EventBasic type="time" />
+// );
+
+// root.render(
+//   <StateBasic init={0} />
+// );
+
+// root.render(
+//   <ForList src={books} />
+// );
+// root.render(
+//   <ForNest src={books} />
+// );
+
+// root.render(
+//   <ForFilter src={books} />
+// );
+
 root.render(
-  React.createElement('div', { className: 'main'}, 
-    React.createElement('p', null, `「${title}」（SBクリエイティブ刊）`),
-    React.createElement('img', {
-      src: 'https://wings.msn.to/books/978-4-8156-1336-5/978-4-8156-1336-5.jpg',
-      alt: title,
-    }),
-    '絶賛発売中！'
-  )
+  <ForSort src={books} />
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
