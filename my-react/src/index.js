@@ -137,17 +137,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <ForList src={books} />
 // );
-// root.render(
-//   <ForNest src={books} />
-// );
+root.render(
+  <ForNest src={books} />
+);
 
 // root.render(
 //   <ForFilter src={books} />
 // );
 
-root.render(
-  <ForSort src={books} />
-);
+// root.render(
+//   <ForSort src={books} />
+// );
 
 
 // If you want to start measuring performance in your app, pass a function
