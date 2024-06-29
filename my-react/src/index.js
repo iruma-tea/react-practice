@@ -18,6 +18,8 @@ import ForNest from './chap03/Fornest';
 import ForFilter from './chap03/ForFilter';
 import ForSort from './chap03/ForSort';
 import SelectStyle from './chap03/SelectStyle';
+import StyledPanel from './chap03/StyledPanel';
+import TitledPanel from './chap03/TitledPanel';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -150,9 +152,39 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <ForSort src={books} />
 // );
 
+// root.render(
+//   <SelectStyle mode="light" />
+// );
+
+// root.render(
+//   <StyledPanel>
+//     <p>メンバー募集中!</p>
+//     <p>ようこそ、WINGSプロジェクトへ!!</p>
+//   </StyledPanel>
+// );
+
+// root.render(
+//   <TitledPanel title={
+//     <p>メンバー募集中！</p>
+//   } body={
+//     <p>ようこそ、WINGSプロジェクトへ</p>
+//   }>
+//   </TitledPanel>
+// );
+
+// const title = <p>メンバー募集中!</p>;
+// const body = <p>ようこそ、WINGSプロジェクトへ</p>;
+// root.render(
+//   <TitledPanel title={title} body={body} />
+// );
+
 root.render(
-  <SelectStyle mode="light" />
+  <TitledPanel>
+    <p key="title">メンバー募集中!</p>
+    <p key="body">ようこそ、WINGSプロジェクトへ</p>
+  </TitledPanel>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
