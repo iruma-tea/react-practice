@@ -20,6 +20,7 @@ import ForSort from './chap03/ForSort';
 import SelectStyle from './chap03/SelectStyle';
 import StyledPanel from './chap03/StyledPanel';
 import TitledPanel from './chap03/TitledPanel';
+import ListTemplate from './chap03/ListTemplate';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -178,13 +179,27 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <TitledPanel title={title} body={body} />
 // );
 
-root.render(
-  <TitledPanel>
-    <p key="title">メンバー募集中!</p>
-    <p key="body">ようこそ、WINGSプロジェクトへ</p>
-  </TitledPanel>
-);
+// root.render(
+//   <TitledPanel>
+//     <p key="title">メンバー募集中!</p>
+//     <p key="body">ようこそ、WINGSプロジェクトへ</p>
+//   </TitledPanel>
+// );
 
+root.render(
+  <ListTemplate src={books}>
+    {elem => (
+      <>
+        <dt>
+          <a href={`https://wings.msn.to/books/${elem.isbn}/${elem.isbn}.jpg`}>
+            {elem.title} ({elem.price}円)    
+          </a>
+        </dt>
+        <dd>{elem.summary}</dd>
+      </>
+    )}
+  </ListTemplate>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
