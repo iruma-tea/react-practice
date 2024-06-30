@@ -21,6 +21,7 @@ import SelectStyle from './chap03/SelectStyle';
 import StyledPanel from './chap03/StyledPanel';
 import TitledPanel from './chap03/TitledPanel';
 import ListTemplate from './chap03/ListTemplate';
+import TypeProp, {Member} from './chap03/TypeProp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -201,17 +202,28 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   </ListTemplate>
 // );
 
+// root.render(
+//   <ListTemplate src={books} render={ elem =>(
+//     <>
+//       <dt>
+//         <a href={`https://wings.msn.to/books/${elem.isbn}/${elem.isbn}.jpg`}>
+//           {elem.title} ({elem.price}円)
+//         </a>
+//       </dt>
+//       <dd>{elem.summary}</dd>
+//     </>
+//   )} />
+// );
+
+// root.render(
+//   <MyHello />
+// );
+
 root.render(
-  <ListTemplate src={books} render={ elem =>(
-    <>
-      <dt>
-        <a href={`https://wings.msn.to/books/${elem.isbn}/${elem.isbn}.jpg`}>
-          {elem.title} ({elem.price}円)
-        </a>
-      </dt>
-      <dd>{elem.summary}</dd>
-    </>
-  )} />
+  // 正しい使い方
+  // <TypeProp prop1={new Member()} />
+  // 誤った例
+  <TypeProp prop1="hoge" />
 );
 
 // If you want to start measuring performance in your app, pass a function
