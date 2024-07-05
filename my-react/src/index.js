@@ -219,11 +219,25 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <MyHello />
 // );
 
+// root.render(
+//   // 正しい使い方
+//   // <TypeProp prop1={new Member()} />
+//   // 誤った例
+//   <TypeProp prop1="hoge" />
+// );
+
+// root.render(
+//   // 正しい使い方
+//   // <TypeProp prop2="男性" />
+//   // 間違った例
+//   <TypeProp prop2="hoge" />
+// );
+
 root.render(
-  // 正しい使い方
-  // <TypeProp prop1={new Member()} />
+  // 正しい例
+  <TypeProp prop3="鈴木花子" />
   // 誤った例
-  <TypeProp prop1="hoge" />
+  // <TypeProp prop3={new Member()} />
 );
 
 // If you want to start measuring performance in your app, pass a function

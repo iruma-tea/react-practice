@@ -8,7 +8,14 @@ function TypeProp(props) {
 }
 
 TypeProp.propTypes = {
-    prop1: PropTypes.instanceOf(Member)
+    prop1: PropTypes.instanceOf(Member),
+    prop2: PropTypes.oneOf(['男性', '女性', 'その他']),
+    // 文字列、数値、プール値のいずれか
+    prop3: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number,
+        PropTypes.bool,
+    ]),
 };
 
 export default TypeProp;
