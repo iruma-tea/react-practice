@@ -16,6 +16,7 @@ TypeProp.propTypes = {
         PropTypes.number,
         PropTypes.bool,
     ]),
+    prop4: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default TypeProp;

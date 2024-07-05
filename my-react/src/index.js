@@ -233,12 +233,19 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <TypeProp prop2="hoge" />
 // );
 
+// root.render(
+//   // 正しい例
+//   <TypeProp prop3="鈴木花子" />
+//   // 誤った例
+//   // <TypeProp prop3={new Member()} />
+// );
+
 root.render(
   // 正しい例
-  <TypeProp prop3="鈴木花子" />
+  <TypeProp prop4={[15, 30]} />
   // 誤った例
-  // <TypeProp prop3={new Member()} />
-);
+  // <TypeProp prop3 prop4={[333, '鈴木花子']} />
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
