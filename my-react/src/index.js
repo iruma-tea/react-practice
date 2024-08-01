@@ -36,6 +36,13 @@ import EventOnece from './chap03/EventOnce';
 import EventPassive from './chap03/EventPassive';
 // ■ Chap04
 import StateForm from './chap04/StateForm';
+import StateFormUC from './chap04/StateFormUC';
+import FormTextarea from './chap04/FormTextarea';
+import FormSelect from './chap04/FormSelect';
+import FormList from './chap04/FormList';
+import FormRadio from './chap04/FormRadio';
+import FormCheck from './chap04/FormCheck';
+import FormCheckMulti from './chap04/FormCheckMulti';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -325,8 +332,36 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <EventPassive />
 // );
 
+// root.render(
+//   <StateForm />
+// );
+
+// root.render(
+//   <StateFormUC />
+// );
+
+// root.render(
+//   <FormTextarea />
+// );
+
+// root.render(
+//   <FormSelect />
+// );
+
+// root.render(
+//   <FormList />
+// );
+
+// root.render(
+//   <FormRadio />
+// );
+
+// root.render(
+//   <FormCheck />
+// );
+
 root.render(
-  <StateForm />
+  <FormCheckMulti />
 );
 
 // If you want to start measuring performance in your app, pass a function
