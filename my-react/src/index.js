@@ -34,6 +34,9 @@ import EventArgs2 from './chap03/EventArgs2';
 import EventPropagation from './chap03/EventPropagation';
 import EventOnece from './chap03/EventOnce';
 import EventPassive from './chap03/EventPassive';
+// ■ Chap04
+import StateForm from './chap04/StateForm';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -318,8 +321,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <EventOnece />
 // );
 
+// root.render(
+//   <EventPassive />
+// );
+
 root.render(
-  <EventPassive />
+  <StateForm />
 );
 
 // If you want to start measuring performance in your app, pass a function
