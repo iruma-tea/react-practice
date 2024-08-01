@@ -24,6 +24,8 @@ import ListTemplate from './chap03/ListTemplate';
 import TypeProp, {Member} from './chap03/TypeProp';
 import StateParent from './chap03/StateParent';
 import EventMouse from './chap03/EventMouse';
+import EventCompare from './chap03/EventCompare';
+import EventError from './chap03/EventError';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -268,8 +270,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <StateParent />
 // );
 
+// root.render(
+//   <EventMouse alt="ロゴ画像" beforeSrc="https://www.web-deli.com/image/linkbanner_l.gif" afterSrc="https://www.web-deli.com/image/home_chara.gif" />
+// );
+
+// root.render(
+//   <EventCompare />
+// );
+
 root.render(
-  <EventMouse alt="ロゴ画像" beforeSrc="https://www.web-deli.com/image/linkbanner_l.gif" afterSrc="https://www.web-deli.com/image/home_chara.gif" />
+  <EventError src="./image/wings.jpg" alt="サンプル画像" />
 );
 
 // If you want to start measuring performance in your app, pass a function
