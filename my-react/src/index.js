@@ -26,6 +26,14 @@ import StateParent from './chap03/StateParent';
 import EventMouse from './chap03/EventMouse';
 import EventCompare from './chap03/EventCompare';
 import EventError from './chap03/EventError';
+import EventObj from './chap03/EventObj';
+import EventPoint from './chap03/EventPoint';
+import EventKey from './chap03/EventKey';
+import EventArgs from './chap03/EventArgs';
+import EventArgs2 from './chap03/EventArgs2';
+import EventPropagation from './chap03/EventPropagation';
+import EventOnece from './chap03/EventOnce';
+import EventPassive from './chap03/EventPassive';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
@@ -278,8 +286,40 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <EventCompare />
 // );
 
+// root.render(
+//   <EventError src="./image/wings.jpg" alt="サンプル画像" />
+// );
+
+// root.render(
+//   <EventObj />
+// );
+
+// root.render(
+//   <EventPoint />
+// );
+
+// root.render(
+//   <EventKey />
+// );
+
+// root.render(
+//   <EventArgs />
+// );
+
+// root.render(
+//   <EventArgs2 />
+// );
+
+// root.render(
+//   <EventPropagation />
+// );
+
+// root.render(
+//   <EventOnece />
+// );
+
 root.render(
-  <EventError src="./image/wings.jpg" alt="サンプル画像" />
+  <EventPassive />
 );
 
 // If you want to start measuring performance in your app, pass a function
