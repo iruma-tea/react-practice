@@ -1,51 +1,55 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
 // ■ Chap02
-import AppClass from './AppClass';
-import './chap02/class.css';
+import AppClass from "./AppClass";
+import "./chap02/class.css";
 
 // ■ Chap03
-import MyHello from './chap03/MyHello';
-import EventBasic from './chap03/EventBasic';
-import StateBasic from './chap03/StateBasic';
-import books from './chap03/books';
-import ForList from './chap03/ForList';
-import ForNest from './chap03/Fornest';
-import ForFilter from './chap03/ForFilter';
-import ForSort from './chap03/ForSort';
-import SelectStyle from './chap03/SelectStyle';
-import StyledPanel from './chap03/StyledPanel';
-import TitledPanel from './chap03/TitledPanel';
-import ListTemplate from './chap03/ListTemplate';
-import TypeProp, {Member} from './chap03/TypeProp';
-import StateParent from './chap03/StateParent';
-import EventMouse from './chap03/EventMouse';
-import EventCompare from './chap03/EventCompare';
-import EventError from './chap03/EventError';
-import EventObj from './chap03/EventObj';
-import EventPoint from './chap03/EventPoint';
-import EventKey from './chap03/EventKey';
-import EventArgs from './chap03/EventArgs';
-import EventArgs2 from './chap03/EventArgs2';
-import EventPropagation from './chap03/EventPropagation';
-import EventOnece from './chap03/EventOnce';
-import EventPassive from './chap03/EventPassive';
+import MyHello from "./chap03/MyHello";
+import EventBasic from "./chap03/EventBasic";
+import StateBasic from "./chap03/StateBasic";
+import books from "./chap03/books";
+import ForList from "./chap03/ForList";
+import ForNest from "./chap03/Fornest";
+import ForFilter from "./chap03/ForFilter";
+import ForSort from "./chap03/ForSort";
+import SelectStyle from "./chap03/SelectStyle";
+import StyledPanel from "./chap03/StyledPanel";
+import TitledPanel from "./chap03/TitledPanel";
+import ListTemplate from "./chap03/ListTemplate";
+import TypeProp, { Member } from "./chap03/TypeProp";
+import StateParent from "./chap03/StateParent";
+import EventMouse from "./chap03/EventMouse";
+import EventCompare from "./chap03/EventCompare";
+import EventError from "./chap03/EventError";
+import EventObj from "./chap03/EventObj";
+import EventPoint from "./chap03/EventPoint";
+import EventKey from "./chap03/EventKey";
+import EventArgs from "./chap03/EventArgs";
+import EventArgs2 from "./chap03/EventArgs2";
+import EventPropagation from "./chap03/EventPropagation";
+import EventOnece from "./chap03/EventOnce";
+import EventPassive from "./chap03/EventPassive";
 // ■ Chap04
-import StateForm from './chap04/StateForm';
-import StateFormUC from './chap04/StateFormUC';
-import FormTextarea from './chap04/FormTextarea';
-import FormSelect from './chap04/FormSelect';
-import FormList from './chap04/FormList';
-import FormRadio from './chap04/FormRadio';
-import FormCheck from './chap04/FormCheck';
-import FormCheckMulti from './chap04/FormCheckMulti';
+import StateForm from "./chap04/StateForm";
+import StateFormUC from "./chap04/StateFormUC";
+import FormTextarea from "./chap04/FormTextarea";
+import FormSelect from "./chap04/FormSelect";
+import FormList from "./chap04/FormList";
+import FormRadio from "./chap04/FormRadio";
+import FormCheck from "./chap04/FormCheck";
+import FormCheckMulti from "./chap04/FormCheckMulti";
+import FormFile from "./chap04/FormFile";
+import StateNest from "./chap04/StateNest";
+import StateNestImmer from "./chap04/StateNestImmer";
+import StateNestImmer2 from "./chap04/StateNestImmer2";
+import StateTodo from "./chap04/StateTodo";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
 //   <React.StrictMode>
 //     <App />
@@ -78,7 +82,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // const content = `<h3>WINGSプロジェクト</h3><img src="https://wings.msn.to/image/wings.jpg" />`;
 // root.render(
-  // <p>{content}</p>
+// <p>{content}</p>
 //   <p dangerouslySetInnerHTML={{__html: content}}></p>
 // );
 
@@ -125,8 +129,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // };
 
 // root.render(
-  // <p style={props}>WINGSプロジェクト</p>
-  // <p className='hoge'>WINGSプロジェクト</p>
+// <p style={props}>WINGSプロジェクト</p>
+// <p className='hoge'>WINGSプロジェクト</p>
 // );
 
 // const title = 'これからはじめるVue.js 3実践入門';
@@ -139,7 +143,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   </div>
 // );
 // root.render(
-//   React.createElement('div', { className: 'main'}, 
+//   React.createElement('div', { className: 'main'},
 //     React.createElement('p', null, `「${title}」（SBクリエイティブ刊）`),
 //     React.createElement('img', {
 //       src: 'https://wings.msn.to/books/978-4-8156-1336-5/978-4-8156-1336-5.jpg',
@@ -215,7 +219,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //       <>
 //         <dt>
 //           <a href={`https://wings.msn.to/books/${elem.isbn}/${elem.isbn}.jpg`}>
-//             {elem.title} ({elem.price}円)    
+//             {elem.title} ({elem.price}円)
 //           </a>
 //         </dt>
 //         <dd>{elem.summary}</dd>
@@ -360,9 +364,21 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //   <FormCheck />
 // );
 
-root.render(
-  <FormCheckMulti />
-);
+// root.render(
+//   <FormCheckMulti />
+// );
+
+// root.render(
+//   <FormFile />
+// );
+
+// root.render(
+//   <StateNest />
+// );
+
+// root.render(<StateNestImmer />);
+// root.render(<StateNestImmer2 />);
+root.render(<StateTodo />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

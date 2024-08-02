@@ -13,5 +13,14 @@
 		"workbench.colorTheme": "Monokai",
 		"files.eol": "\n",
 		"liveServer.settings.multiRootWorkspaceName": "react-practice",
+		"[javascript]": {
+			"editor.formatOnSave": true,
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+			"editor.maxTokenizationLineLength": 2500
+		},
+		"[javascriptreact]": {
+			"editor.formatOnSave": true,
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+		}
 	}
 }
