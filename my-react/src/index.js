@@ -54,6 +54,8 @@ import FormJapan from "./chap04/FormJapan";
 // ■ Chap05
 import LazyBasic from "./chap05/LazyBasic";
 import LazyMulti from "./chap05/LazyMulti";
+import SuspenseSimple from "./chap05/SuspenseSimple";
+import SuspenseResult from "./chap05/SuspenseResult";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -389,7 +391,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<FormYup />);
 // root.render(<FormJapan />);
 // root.render(<LazyBasic />);
-root.render(<LazyMulti />);
+// root.render(<LazyMulti />);
+// root.render(<SuspenseSimple />);
+root.render(<SuspenseResult />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
