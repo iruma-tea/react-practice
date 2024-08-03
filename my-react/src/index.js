@@ -55,7 +55,10 @@ import FormJapan from "./chap04/FormJapan";
 import LazyBasic from "./chap05/LazyBasic";
 import LazyMulti from "./chap05/LazyMulti";
 import SuspenseSimple from "./chap05/SuspenseSimple";
+<<<<<<< HEAD
 import SuspenseResult from "./chap05/SuspenseResult";
+=======
+>>>>>>> 7a769eb73e6b1d871f7b65329a20910bbb48c667
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
