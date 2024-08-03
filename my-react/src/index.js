@@ -57,6 +57,11 @@ import LazyMulti from "./chap05/LazyMulti";
 import SuspenseSimple from "./chap05/SuspenseSimple";
 import SuspenseResult from "./chap05/SuspenseResult";
 import ProfilerBasic from "./chap05/ProfilerBasic";
+import StyledComp from "./chap05/StyledComp";
+import { MyButton, MyStyleButton } from "./chap05/StyledComp2";
+import StyledCommon from "./chap05/StyledCommon";
+import GlobalStyle from "./chap05/StyleGlobal";
+import StyledProps from "./chap05/StyledProps";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -395,7 +400,22 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<LazyMulti />);
 // root.render(<SuspenseSimple />);
 // root.render(<SuspenseResult />);
-root.render(<ProfilerBasic />);
+// root.render(<ProfilerBasic />);
+// root.render(<StyledComp />);
+// root.render(
+//   <>
+//     <MyButton>ボタン</MyButton>
+//     <MyStyleButton>ボタン</MyStyleButton>
+//   </>
+// );
+// root.render(<StyledCommon />);
+// root.render(
+//   <>
+//     <GlobalStyle />
+//     <StyledComp />
+//   </>
+// );
+root.render(<StyledProps />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
