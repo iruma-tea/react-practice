@@ -56,6 +56,7 @@ import LazyBasic from "./chap05/LazyBasic";
 import LazyMulti from "./chap05/LazyMulti";
 import SuspenseSimple from "./chap05/SuspenseSimple";
 import SuspenseResult from "./chap05/SuspenseResult";
+import ProfilerBasic from "./chap05/ProfilerBasic";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -393,7 +394,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<LazyBasic />);
 // root.render(<LazyMulti />);
 // root.render(<SuspenseSimple />);
-root.render(<SuspenseResult />);
+// root.render(<SuspenseResult />);
+root.render(<ProfilerBasic />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
