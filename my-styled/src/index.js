@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import StyledBasic from "./StyledBasic";
 import StyledCss from "./StyledCss";
+import StyledDynamic from "./StyledDynamic";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -12,12 +13,20 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //     <App />
 //   </React.StrictMode>
 // );
+// root.render(
+//   <>
+//     <h3>Styled JSXの基本</h3>
+//     {/* <StyledBasic /> */}
+//     <StyledCss />
+//   </>
+// );
 root.render(
-  <>
-    <h3>Styled JSXの基本</h3>
-    {/* <StyledBasic /> */}
-    <StyledCss />
-  </>
+  <StyledDynamic
+    them={{
+      radius: true,
+      color: "royalblue",
+    }}
+  />
 );
 
 // If you want to start measuring performance in your app, pass a function
