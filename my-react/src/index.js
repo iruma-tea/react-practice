@@ -70,6 +70,8 @@ import PortalBasic from "./chap05/PortalBasic";
 import ErrorRoot from "./chap05/ErrorRoot";
 import ErrorRetryRoot from "./chap05/ErrorRetryRoot";
 import ErrorEventRoot from "./chap05/ErrorEventRoot";
+// ■ Chap06
+import MaterialBasic from "./chap06/MaterialBasic";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -448,7 +450,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(<ErrorRoot />);
 // root.render(<ErrorRetryRoot />);
-root.render(<ErrorEventRoot />);
+// root.render(<ErrorEventRoot />);
+
+root.render(<MaterialBasic />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
