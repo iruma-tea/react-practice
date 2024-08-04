@@ -66,6 +66,8 @@ import EmotionJsx from "./chap05/EmotionJsx";
 import EmotionComp from "./chap05/EmotionComp";
 /** @jsxImportSource @emotion/react */
 import { css, Global } from "@emotion/react";
+import PortalBasic from "./chap05/PortalBasic";
+import ErrorRoot from "./chap05/ErrorRoot";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -423,17 +425,26 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<EmotionJsx />);
 // root.render(<EmotionComp />);
 
-const global = css`
-  body {
-    background-color: Yellow;
-  }
-`;
-root.render(
-  <>
-    <Global styles={global} />
-    <EmotionJsx />
-  </>
-);
+// const global = css`
+//   body {
+//     background-color: Yellow;
+//   }
+// `;
+// root.render(
+//   <>
+//     <Global styles={global} />
+//     <EmotionJsx />
+//   </>
+// );
+
+// root.render(
+//   <>
+//     <div id="dialog"></div>
+//     <PortalBasic />
+//   </>
+// );
+
+root.render(<ErrorRoot />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
