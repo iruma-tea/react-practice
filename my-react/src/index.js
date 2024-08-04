@@ -68,6 +68,7 @@ import EmotionComp from "./chap05/EmotionComp";
 import { css, Global } from "@emotion/react";
 import PortalBasic from "./chap05/PortalBasic";
 import ErrorRoot from "./chap05/ErrorRoot";
+import ErrorRetryRoot from "./chap05/ErrorRetryRoot";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -444,7 +445,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   </>
 // );
 
-root.render(<ErrorRoot />);
+// root.render(<ErrorRoot />);
+root.render(<ErrorRetryRoot />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
