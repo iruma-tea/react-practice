@@ -72,6 +72,7 @@ import ErrorRetryRoot from "./chap05/ErrorRetryRoot";
 import ErrorEventRoot from "./chap05/ErrorEventRoot";
 // ■ Chap06
 import MaterialBasic from "./chap06/MaterialBasic";
+import MaterialDrawer from "./chap06/MaterialDrawer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -452,7 +453,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<ErrorRetryRoot />);
 // root.render(<ErrorEventRoot />);
 
-root.render(<MaterialBasic />);
+// root.render(<MaterialBasic />);
+root.render(<MaterialDrawer />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
