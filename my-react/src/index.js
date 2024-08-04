@@ -62,6 +62,10 @@ import { MyButton, MyStyleButton } from "./chap05/StyledComp2";
 import StyledCommon from "./chap05/StyledCommon";
 import GlobalStyle from "./chap05/StyleGlobal";
 import StyledProps from "./chap05/StyledProps";
+import EmotionJsx from "./chap05/EmotionJsx";
+import EmotionComp from "./chap05/EmotionComp";
+/** @jsxImportSource @emotion/react */
+import { css, Global } from "@emotion/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -415,7 +419,21 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //     <StyledComp />
 //   </>
 // );
-root.render(<StyledProps />);
+// root.render(<StyledProps />);
+// root.render(<EmotionJsx />);
+// root.render(<EmotionComp />);
+
+const global = css`
+  body {
+    background-color: Yellow;
+  }
+`;
+root.render(
+  <>
+    <Global styles={global} />
+    <EmotionJsx />
+  </>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
