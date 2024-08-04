@@ -1,5 +1,6 @@
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorRetryThrow from "./ErrorRetryThrow";
+import ErrorFallback from "./ErrorFallback";
 
 export default function ErrorRetryRoot() {
   const handleFallback = ({ error, resetErrorBoundary }) => {
@@ -19,7 +20,10 @@ export default function ErrorRetryRoot() {
   return (
     <>
       <h3>Error Boundaryの基本</h3>
-      <ErrorBoundary onReset={handleReset} fallbackRender={handleFallback}>
+      {/* <ErrorBoundary onReset={handleReset} fallbackRender={handleFallback}>
+        <ErrorRetryThrow />
+      </ErrorBoundary> */}
+      <ErrorBoundary onReset={handleReset} FallbackComponent={ErrorFallback}>
         <ErrorRetryThrow />
       </ErrorBoundary>
     </>
