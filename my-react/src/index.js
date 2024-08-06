@@ -78,6 +78,9 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "./chap06/theme";
 import MaterialMode from "./chap06/MaterialMode";
 import FormMui from "./chap06/FormMui";
+import QueryPre from "./chap06/QueryPre";
+import { QueryClient, QueryClientProvider } from "react-query";
+import QueryBasic from "./chap06/QueryBasic";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -468,7 +471,14 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   </ThemeProvider>
 // );
 // root.render(<MaterialMode />);
-root.render(<FormMui />);
+// root.render(<FormMui />);
+// root.render(<QueryPre />);
+const cli = new QueryClient();
+root.render(
+  <QueryClientProvider client={cli}>
+    <QueryBasic />
+  </QueryClientProvider>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
