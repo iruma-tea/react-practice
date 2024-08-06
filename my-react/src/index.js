@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -81,6 +81,8 @@ import FormMui from "./chap06/FormMui";
 import QueryPre from "./chap06/QueryPre";
 import { QueryClient, QueryClientProvider } from "react-query";
 import QueryBasic from "./chap06/QueryBasic";
+import { ErrorBoundary } from "react-error-boundary";
+import QuerySuspense from "./chap06/QuerySuspense";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -473,11 +475,27 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<MaterialMode />);
 // root.render(<FormMui />);
 // root.render(<QueryPre />);
-const cli = new QueryClient();
+// const cli = new QueryClient();
+// root.render(
+//   <QueryClientProvider client={cli}>
+//     <QueryBasic />
+//   </QueryClientProvider>
+// );
+const cli = new QueryClient({
+  defaultOptions: {
+    queries: {
+      suspense: true,
+    },
+  },
+});
 root.render(
-  <QueryClientProvider client={cli}>
-    <QueryBasic />
-  </QueryClientProvider>
+  <Suspense fallback={<p>Loading...</p>}>
+    <ErrorBoundary fallback={<div>エラーが発生しました。</div>}>
+      <QueryClientProvider client={cli}>
+        <QuerySuspense />
+      </QueryClientProvider>
+    </ErrorBoundary>
+  </Suspense>
 );
 
 // If you want to start measuring performance in your app, pass a function
