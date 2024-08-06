@@ -83,6 +83,10 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import QueryBasic from "./chap06/QueryBasic";
 import { ErrorBoundary } from "react-error-boundary";
 import QuerySuspense from "./chap06/QuerySuspense";
+// ■ Chap07
+import StateEffect from "./chap07/StateEffect";
+import HookTimer from "./chap07/HookTimer";
+import HookEffect from "./chap07/HookEffect";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -481,22 +485,26 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //     <QueryBasic />
 //   </QueryClientProvider>
 // );
-const cli = new QueryClient({
-  defaultOptions: {
-    queries: {
-      suspense: true,
-    },
-  },
-});
-root.render(
-  <Suspense fallback={<p>Loading...</p>}>
-    <ErrorBoundary fallback={<div>エラーが発生しました。</div>}>
-      <QueryClientProvider client={cli}>
-        <QuerySuspense />
-      </QueryClientProvider>
-    </ErrorBoundary>
-  </Suspense>
-);
+// const cli = new QueryClient({
+//   defaultOptions: {
+//     queries: {
+//       suspense: true,
+//     },
+//   },
+// });
+// root.render(
+//   <Suspense fallback={<p>Loading...</p>}>
+//     <ErrorBoundary fallback={<div>エラーが発生しました。</div>}>
+//       <QueryClientProvider client={cli}>
+//         <QuerySuspense />
+//       </QueryClientProvider>
+//     </ErrorBoundary>
+//   </Suspense>
+// );
+
+// root.render(<StateEffect init={0} />);
+// root.render(<HookTimer init={10} />);
+root.render(<HookEffect init={10} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
