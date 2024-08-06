@@ -74,6 +74,10 @@ import ErrorEventRoot from "./chap05/ErrorEventRoot";
 import MaterialBasic from "./chap06/MaterialBasic";
 import MaterialDrawer from "./chap06/MaterialDrawer";
 import MaterialGrid from "./chap06/MaterialGrid";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import theme from "./chap06/theme";
+import MaterialMode from "./chap06/MaterialMode";
+import FormMui from "./chap06/FormMui";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -456,7 +460,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(<MaterialBasic />);
 // root.render(<MaterialDrawer />);
-root.render(<MaterialGrid />);
+// root.render(<MaterialGrid />);
+// root.render(
+//   <ThemeProvider theme={theme}>
+//     <CssBaseline />
+//     <MaterialBasic />
+//   </ThemeProvider>
+// );
+// root.render(<MaterialMode />);
+root.render(<FormMui />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
