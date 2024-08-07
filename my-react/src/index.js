@@ -94,6 +94,9 @@ import HookCallbackRef from "./chap07/HookCallbackRef";
 import HookReducer from "./chap07/HookReducer";
 import HookReducerUp from "./chap07/HookReducerUp";
 import HookReducerInit from "./chap07/HookReducerInit";
+import HookContext from "./chap07/HookContext";
+import MyThemeProvider from "./chap07/MyThemeProvider";
+import HookThemeButton from "./chap07/HookThemeButton";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -518,7 +521,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<HookCallbackRef />);
 // root.render(<HookReducer init={0} />);
 // root.render(<HookReducerUp init={0} />);
-root.render(<HookReducerInit init={0} />);
+// root.render(<HookReducerInit init={0} />);
+// root.render(<HookContext />);
+root.render(
+  <MyThemeProvider>
+    <HookThemeButton />
+  </MyThemeProvider>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
