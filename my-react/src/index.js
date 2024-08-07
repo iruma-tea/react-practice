@@ -99,6 +99,7 @@ import MyThemeProvider from "./chap07/MyThemeProvider";
 import HookThemeButton from "./chap07/HookThemeButton";
 import RecoilCounter from "./chap07/RecoilCounter";
 import { RecoilRoot } from "recoil";
+import RecoilTodo from "./chap07/RecoilTodo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -530,9 +531,14 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //     <HookThemeButton />
 //   </MyThemeProvider>
 // );
+// root.render(
+//   <RecoilRoot>
+//     <RecoilCounter />
+//   </RecoilRoot>
+// );
 root.render(
   <RecoilRoot>
-    <RecoilCounter />
+    <RecoilTodo />
   </RecoilRoot>
 );
 
