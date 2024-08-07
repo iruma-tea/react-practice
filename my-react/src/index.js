@@ -89,6 +89,7 @@ import HookTimer from "./chap07/HookTimer";
 import HookEffect from "./chap07/HookEffect";
 import HookRefNg from "./chap07/HookRefNg";
 import HookRef from "./chap07/HookRef";
+import HookRefForward from "./chap07/HookRefForward";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -508,7 +509,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<HookTimer init={10} />);
 // root.render(<HookEffect init={10} />);
 // root.render(<HookRefNg />);
-root.render(<HookRef />);
+// root.render(<HookRef />);
+root.render(<HookRefForward />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
