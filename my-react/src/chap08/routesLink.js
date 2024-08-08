@@ -11,7 +11,9 @@ import AboutPage from "./AboutPage";
 const routesLink = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RouterApp />}>
-      <Route path="" element={<TopPage />} />
+      {/* <Route path="" element={<TopPage />} /> */}
+      {/* <Route index element={<TopPage />} /> */}
+      <Route path="/" element={<TopPage />} />
       <Route path="/article" element={<ArticlePage />} />
       <Route path="/about" element={<AboutPage />} />
     </Route>
