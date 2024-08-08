@@ -102,6 +102,7 @@ import { RecoilRoot } from "recoil";
 import RecoilTodo from "./chap07/RecoilTodo";
 import RecoilTodoUp from "./chap07/RecoilTodoUp";
 import HookMemo from "./chap07/HookMemo";
+import HookTransition from "./chap07/HookTransition";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -548,7 +549,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //     <RecoilTodoUp />
 //   </RecoilRoot>
 // );
-root.render(<HookMemo />);
+// root.render(<HookMemo />);
+root.render(<HookTransition />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
