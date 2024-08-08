@@ -1,4 +1,4 @@
-import { useDeferredValue, useState, useTransition } from "react";
+import { useDeferredValue, useState } from "react";
 import books from "./books";
 import commentList from "./comments";
 import { BookDetails, CommentList } from "./HookTransitionChild";
