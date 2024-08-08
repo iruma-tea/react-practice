@@ -109,6 +109,7 @@ import HookCustom from "./chap07/HookCustom";
 // ■ Chap08
 import { RouterProvider } from "react-router-dom";
 import routesBasic from "./chap08/routesBasic";
+import routesLink from "./chap08/routesLink";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -561,7 +562,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<HookDeferredTransition />);
 // root.render(<HookCustom />);
 
-root.render(<RouterProvider router={routesBasic} />);
+// root.render(<RouterProvider router={routesBasic} />);
+root.render(<RouterProvider router={routesLink} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
