@@ -106,6 +106,9 @@ import HookTransition from "./chap07/HookTransition";
 import HookDefeered from "./chap07/HookDeferred";
 import HookDeferredTransition from "./chap07/HookDeferredTransition";
 import HookCustom from "./chap07/HookCustom";
+// ■ Chap08
+import { RouterProvider } from "react-router-dom";
+import routesBasic from "./chap08/routesBasic";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -556,7 +559,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(<HookTransition />);
 // root.render(<HookDefeered />);
 // root.render(<HookDeferredTransition />);
-root.render(<HookCustom />);
+// root.render(<HookCustom />);
+
+root.render(<RouterProvider router={routesBasic} />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
