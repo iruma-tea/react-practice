@@ -18,6 +18,11 @@ export default function RouterParam() {
             改訂3版 JavaScript本格入門
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/book" end>
+            既定の書籍
+          </NavLink>
+        </li>
       </ul>
       <hr />
       <Outlet />
