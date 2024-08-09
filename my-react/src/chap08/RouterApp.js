@@ -12,7 +12,12 @@ export default function RouterApp() {
           <Link to="/article">公開記事</Link>
         </li>
         <li>
-          <Link to="/about">このサイトについて</Link>
+          <Link to="/about" replace>
+            このサイトについて
+          </Link>
+        </li>
+        <li>
+          <Link to="/article/info">Infoページ</Link>
         </li>
       </ul>
       <hr />
