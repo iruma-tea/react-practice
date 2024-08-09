@@ -111,6 +111,8 @@ import { RouterProvider } from "react-router-dom";
 import routesBasic from "./chap08/routesBasic";
 import routesLink from "./chap08/routesLink";
 import routesParam from "./chap08/routesParam";
+import { HelmetProvider } from "react-helmet-async";
+import routesHandle from "./chap08/routesHandle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -565,7 +567,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(<RouterProvider router={routesBasic} />);
 // root.render(<RouterProvider router={routesLink} />);
-root.render(<RouterProvider router={routesParam} />);
+// root.render(<RouterProvider router={routesParam} />);
+
+root.render(
+  <HelmetProvider>
+    <RouterProvider router={routesHandle} />
+  </HelmetProvider>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
