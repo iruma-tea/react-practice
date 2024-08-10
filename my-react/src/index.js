@@ -567,13 +567,13 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(<RouterProvider router={routesBasic} />);
 // root.render(<RouterProvider router={routesLink} />);
-// root.render(<RouterProvider router={routesParam} />);
+root.render(<RouterProvider router={routesParam} />);
 
-root.render(
-  <HelmetProvider>
-    <RouterProvider router={routesHandle} />
-  </HelmetProvider>
-);
+// root.render(
+//   <HelmetProvider>
+//     <RouterProvider router={routesHandle} />
+//   </HelmetProvider>
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
