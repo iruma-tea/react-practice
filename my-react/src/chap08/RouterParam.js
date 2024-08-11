@@ -1,9 +1,10 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigation } from "react-router-dom";
 import "./RouterNav.css";
 // import { useState } from "react";
 
 export default function RouterParam() {
   // const [count, setCount] = useState(0);
+  const navigation = useNavigation();
   return (
     <>
       {/* <p>アクセス数: {count}</p> */}
@@ -40,11 +41,14 @@ export default function RouterParam() {
           <NavLink to="/search/react/router/remix">検索結果</NavLink>
         </li>
         <li>
+          <NavLink to="/weather/Tokyo">東京の天気</NavLink>
+        </li>
+        <li>
           <NavLink to="/nothing/foo/bar">存在しないページ</NavLink>
         </li>
       </ul>
       <hr />
-      <Outlet />
+      {navigation.state === "loading" ? <p>Loading...</p> : <Outlet />}
       {/* <Outlet context={[count, setCount]} /> */}
     </>
   );
