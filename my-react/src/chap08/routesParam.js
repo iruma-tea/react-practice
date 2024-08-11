@@ -3,6 +3,7 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   json,
+  redirect,
 } from "react-router-dom";
 import RouterParam from "./RouterParam";
 import TopPage from "./TopPage";
@@ -14,6 +15,9 @@ import BookStatePage from "./BookStatePage";
 import InvalidParamsPage from "./InvalidParamsPage";
 import WeatherPage from "./WeatherPage";
 import CommonErrorPage from "./CommonErrorPage";
+import yup from "../chap04/yup.jp";
+import { date, number, string } from "yup";
+import BookFormPage from "./BookFormPage";
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
@@ -62,10 +66,43 @@ const fetchWeather = async ({ params }) => {
   // }
 };
 
+const bookAction = async ({ request }) => {
+  const form = await request.formData();
+
+  // スキーマの定義
+  const bookSchema = yup.object({
+    title: string().label("書名").required().max(100),
+    price: number().label("価格").integer().positive(),
+    published: date()
+      .label("刊行日")
+      .required()
+      .max(new Date(2100, 0, 1)),
+  });
+
+  let info;
+  try {
+    info = await bookSchema.validate(
+      {
+        title: form.get("title"),
+        price: form.get("price") || 0,
+        published: new Date(form.get("published") || new Date()),
+      },
+      {
+        abortEarly: false,
+      }
+    );
+    console.log(info);
+    return redirect("/");
+  } catch (e) {
+    return e.errors;
+  }
+};
+
 const routesParam = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RouterParam />} errorElement={<CommonErrorPage />}>
       <Route path="/" element={<TopPage />} />
+      <Route path="/book/form" element={<BookFormPage />} action={bookAction} />
       <Route
         path="/book/:isbn?"
         element={<BookPage />}

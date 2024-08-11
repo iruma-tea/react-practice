@@ -13,6 +13,9 @@ export default function RouterParam() {
           <NavLink to="/">トップ</NavLink>
         </li>
         <li>
+          <NavLink to="/book/form">書籍登録フォーム</NavLink>
+        </li>
+        <li>
           <NavLink to="/book/978-4-8156-1336-5">
             これからはじめるVue.js3実践入門
           </NavLink>
