@@ -18,6 +18,7 @@ import CommonErrorPage from "./CommonErrorPage";
 import yup from "../chap04/yup.jp";
 import { date, number, string } from "yup";
 import BookFormPage from "./BookFormPage";
+import { Component } from "react";
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
@@ -104,6 +105,21 @@ const routesParam = createBrowserRouter(
       <Route path="/" element={<TopPage />} />
       <Route path="/book/form" element={<BookFormPage />} action={bookAction} />
       <Route
+        path="/books"
+        lazy={async () => {
+          const { BookListPage } = await import("./BookNest");
+          return { Component: BookListPage };
+        }}
+      >
+        <Route
+          path=":isbn"
+          lazy={async () => {
+            const { BookDetailsPage } = await import("./BookNest");
+            return { Component: BookDetailsPage };
+          }}
+        />
+      </Route>
+      <Route
         path="/book/:isbn?"
         element={<BookPage />}
         errorElement={<InvalidParamsPage />}
@@ -122,6 +138,7 @@ const routesParam = createBrowserRouter(
         // }
         loader={fetchWeather}
       />
+      {/* <Route path="/weather/:city" lazy={() => import("./WeatherLazyPage")} /> */}
       <Route path="*" element={<NotFoundPage />} />
     </Route>
   )
