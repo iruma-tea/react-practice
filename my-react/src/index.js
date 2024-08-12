@@ -113,6 +113,7 @@ import routesLink from "./chap08/routesLink";
 import routesParam from "./chap08/routesParam";
 import { HelmetProvider } from "react-helmet-async";
 import routesHandle from "./chap08/routesHandle";
+import routesMyLink from "./chap08/routesMyLink";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(
@@ -567,7 +568,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // root.render(<RouterProvider router={routesBasic} />);
 // root.render(<RouterProvider router={routesLink} />);
-root.render(<RouterProvider router={routesParam} />);
+// root.render(<RouterProvider router={routesParam} />);
+root.render(<RouterProvider router={routesMyLink} />);
 
 // root.render(
 //   <HelmetProvider>
