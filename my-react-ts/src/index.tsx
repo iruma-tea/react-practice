@@ -10,6 +10,8 @@ import books from './books';
 import { Book } from './Book';
 import MyThemeProvider from './MyThemeProvider';
 import HookThemeButton from './HookThemeButton';
+import HookReducerUp from './HookReducerUp';
+import StateFormUC from './StateFormUC';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -39,11 +41,19 @@ const root = ReactDOM.createRoot(
 //   </ListTemplate>
 // );
 
+// root.render(
+//   <MyThemeProvider>
+//     <HookThemeButton />
+//   </MyThemeProvider>
+// )
+
+// root.render(
+//   <HookReducerUp init={0} />
+// );
+
 root.render(
-  <MyThemeProvider>
-    <HookThemeButton />
-  </MyThemeProvider>
-)
+  <StateFormUC />
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
