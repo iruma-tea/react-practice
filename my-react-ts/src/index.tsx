@@ -12,6 +12,7 @@ import MyThemeProvider from './MyThemeProvider';
 import HookThemeButton from './HookThemeButton';
 import HookReducerUp from './HookReducerUp';
 import StateFormUC from './StateFormUC';
+import QueryPre from './QueryPre';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -51,9 +52,11 @@ const root = ReactDOM.createRoot(
 //   <HookReducerUp init={0} />
 // );
 
-root.render(
-  <StateFormUC />
-);
+// root.render(
+//   <StateFormUC />
+// );
+
+root.render(<QueryPre />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
