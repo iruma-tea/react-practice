@@ -32,7 +32,7 @@ export async function removeReview(data) {
   await prisma.reviews.delete({
     where: {
       id: data.get("id"),
-      // id: data
+      // id: data,
     },
   });
   redirect("/");

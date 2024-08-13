@@ -12,6 +12,7 @@
 		"workbench.iconTheme": "vscode-icons",
 		"workbench.colorTheme": "Monokai",
 		"files.eol": "\n",
+		"eslint.enable": false,
 		"liveServer.settings.multiRootWorkspaceName": "react-practice",
 		"[javascript]": {
 			"editor.formatOnSave": true,

@@ -1,8 +1,10 @@
 "use client";
 
+// import { useTransition } from "react";
 import { addReview, removeReview } from "@/lib/action";
 
 export default function FormEdit({ src: { id, read, memo } }) {
+  // const [isPending, startTransition] = useTransition();
   return (
     <form action={addReview}>
       <input type="hidden" name="id" defaultValue={id} />
@@ -13,7 +15,7 @@ export default function FormEdit({ src: { id, read, memo } }) {
         <input
           type="date"
           id="read"
-          className="block bg-gray-100 border-2 border-gray-600 rounded forcus: bg-white focus: outline-none focus: border-red-500"
+          className="block bg-gray-100 border-2 border-gray-600 rounded forcus:bg-white focus:outline-none focus:border-red-500"
           defaultValue={read}
         />
       </div>
@@ -42,12 +44,15 @@ export default function FormEdit({ src: { id, read, memo } }) {
       >
         削除
       </button>
-      {/* <button type="button"
-      className="bg-red-600 text-white rounded px-4 py-2 hover:bg-red-500"
-      onClick={() => {
-        startTransition(() => removeReview(id));
-      }}>
-      削除</button> */}
+      {/* <button
+        type="button"
+        className="bg-red-600 text-white rounded px-4 py-2 hover:bg-red-500"
+        onClick={() => {
+          startTransition(() => removeReview(id));
+        }}
+      >
+        削除
+      </button> */}
     </form>
   );
 }
