@@ -13,6 +13,7 @@
 		"workbench.colorTheme": "Monokai",
 		"files.eol": "\n",
 		"eslint.enable": false,
+		"editor.renderWhitespace": "all",
 		"liveServer.settings.multiRootWorkspaceName": "react-practice",
 		"[javascript]": {
 			"editor.formatOnSave": true,
